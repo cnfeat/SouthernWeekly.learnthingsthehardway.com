@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>文档名称</title>
+  <meta name="keywords" content="关键词一, 关键词二, 关键词三 ">
+  <meta name="description" content="内容简介">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <style type="text/css">
+    body { font-family: Helvetica, Arial, "Lucida Grande", "Hiragino Sans GB", "Microsoft Yahei", sans-serif; }
+    .markdown-section code { white-space: pre-line; }
+  </style>
+</head>
+<body>
+  <nav data-cloak>
+    <a href="http://www.learnwritingthehardway.cn/">链接一</a>
+    <a href="https://www.cnfeat.com">链接二</a>
+    <a href="https://book.LearnThingsTheHardWay.com/">链接三</a>
+  </nav>
+  <div id="app">Please wait...</div>
+  <script>
+    window.$docsify = {
+      name: '<img src="/logo.svg" height="32px">',//侧栏图标。
+      auto2top: true, //当路线改变时，滚动到屏幕的顶部。
+      coverpage: false, //激活封面功能。如果为true，则会从中加载_coverpage.md。
+      executeScript: true, //执行页面上的脚本。只解析第一个脚本标记（演示）。如果存在Vue，则默认开启。
+      loadSidebar: true, //_sidebar.md如果为真，则从_sidebar.md文件加载边栏，否则从指定的路径加载。
+      loadNavbar: true,//_navbar.md如果为真，则从_navbar.md文件加载navbar ，否则从指定的路径加载。
+      mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并。
+      maxLevel: 4,//最大的内容表级别。
+      subMaxLevel: 2,//在自定义边栏中添加目录（TOC）。
+      ga: ' GA 分析序号',
+      name: '文档名称',
+      search: {
+        noData: {
+          '/de-de/': 'Keine Ergebnisse!',
+          '/zh-cn/': '没有结果!',
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/de-de/': 'Suche',
+          '/zh-cn/': '搜索',
+          '/': 'Search'
+        }
+      },
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function (html) {
+            var url = 'https://github.com/PYfive/docsify/blob/master/' + vm.route.file
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            return html
+              + '\n----\n'
+              + 'Last modified {docsify-updated} '
+              + editHtml
+          })
+        }
+      ]
+    }
+ </script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+</body>
+</html>

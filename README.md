@@ -1,2 +1,11 @@
-# SouthernWeekly.learnthingsthehardway.com
-南方周末新年献辞（1997-2020）
+# 南方周末新年献辞（1997-2019）
+
+此文集为《笨方法学写作》课程练习参考。
+
+
+### Changelog
+
+- 2020-01-12 收集创建
+
+
+
