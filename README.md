@@ -1,11 +1,10 @@
-# 南方周末新年献辞（1997-2019）
-
-此文集为《笨方法学写作》课程练习参考。
+# 南方周末新年献词
 
 
-### Changelog
+南方周末新年献词已迁移至
 
-- 2020-01-12 收集创建
+https://www.yuque.com/hardwaylab/southernweekly
+
 
 
 
